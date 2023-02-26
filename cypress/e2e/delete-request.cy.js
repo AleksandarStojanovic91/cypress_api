@@ -2,7 +2,7 @@ describe('Delete request', () => {
   it('Delete request', () => {
     cy.request({
       method:"DELETE",
-      url:"https://api.qase.io/v1/project/SMOKE",
+      url:"https://api.qase.io/v1/project/API",
       headers:{
         Token:"d2adf40cf532fb6ed8598a74360b9f5127e0207868ee591631ad6d6fdfaff4a9"
       }
