@@ -1,7 +1,6 @@
 {
   "name": "cypress_api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +9,14 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^11.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksandarStojanovic91/cypress_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AleksandarStojanovic91/cypress_api/issues"
+  },
+  "homepage": "https://github.com/AleksandarStojanovic91/cypress_api#readme",
+  "description": ""
 }
