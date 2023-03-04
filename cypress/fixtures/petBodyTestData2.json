@@ -1,0 +1,58 @@
+{
+  "postPetTests": {
+    "TC001": {
+      "id": 0,
+      "category": {
+        "id": 0,
+        "name": "string"
+      },
+      "name": "Ares",
+      "photoUrls": [
+        "string"
+      ],
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ],
+      "status": "available"
+    },
+    "TC002": {
+      "id": 1,
+      "category": {
+        "id": 0,
+        "name": "string"
+      },
+      "name": "Ares",
+      "photoUrls": [
+        "string"
+      ],
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ],
+      "status": "available"
+    },
+    "TC003": {
+      "id": 123123123123121231231231232323232322232322332331,
+      "category": {
+        "id": 0,
+        "name": "string"
+      },
+      "name": "Ares",
+      "photoUrls": [
+        "string"
+      ],
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ],
+      "status": "available"
+    }
+  }
+}
