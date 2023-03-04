@@ -1,6 +1,6 @@
 import petBody from "../fixtures/petBody.json"
 import {petBodyTestData} from "../fixtures/petBodyTestData.json"
-const petBodyTestData2 = require("../fixtures/petBodyTestData2.json").postPetTests
+import data from "../fixtures/petBodyTestData2.json"
 import api from "../fixtures/endpoints.json"
 const url = Cypress.env("url");
 
@@ -88,26 +88,26 @@ describe('Pet store tests', () => {
             })
     })
 
-    petBodyTestData.forEach((petBodyData) => {
-        xit("Post request - Create pet with different id's", () => {
-            cy.postRequest(url+api.pet.postPet, petBodyData)
-                .then(response => {
-                    expect(response.status).eq(200)
-                    expect(response.body.id).eq(petBodyData.id)
-                    expect(response.body.name).eq(petBodyData.name)
-                })
-        })
-    })
-
-    // Object.entries(petBodyTestData2).forEach(([key, value]) => {
-    //     it(key + " Post request - Create pet", () => {
-    //         cy.postRequest(url + api.pet.postPet, value)
+    // petBodyTestData.forEach((petBodyData) => {
+    //     xit("Post request - Create pet with different id's", () => {
+    //         cy.postRequest(url+api.pet.postPet, petBodyData)
     //             .then(response => {
     //                 expect(response.status).eq(200)
-    //                 expect(response.body.id).eq(value.id)
-    //                 expect(response.body.name).eq(value.name)
+    //                 expect(response.body.id).eq(petBodyData.id)
+    //                 expect(response.body.name).eq(petBodyData.name)
     //             })
     //     })
     // })
+
+    Object.entries(data.postPetTests).forEach(([key, value]) => {
+        it(key + " Post request - Create pet", () => {
+            cy.postRequest(url + api.pet.postPet, value)
+                .then(response => {
+                    expect(response.status).eq(200)
+                    expect(response.body.id).eq(value.id)
+                    expect(response.body.name).eq(value.name)
+                })
+        })
+    })
 
 })
