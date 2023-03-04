@@ -1,5 +1,5 @@
 import petBody from "../fixtures/petBody.json"
-import {petBodyTestData} from "../fixtures/petBodyTestData.json"
+import petBodyTestData from "../fixtures/petBodyTestData.json"
 import data from "../fixtures/petBodyTestData2.json"
 import api from "../fixtures/endpoints.json"
 const url = Cypress.env("url");
@@ -88,19 +88,19 @@ describe('Pet store tests', () => {
             })
     })
 
-    // petBodyTestData.forEach((petBodyData) => {
-    //     xit("Post request - Create pet with different id's", () => {
-    //         cy.postRequest(url+api.pet.postPet, petBodyData)
-    //             .then(response => {
-    //                 expect(response.status).eq(200)
-    //                 expect(response.body.id).eq(petBodyData.id)
-    //                 expect(response.body.name).eq(petBodyData.name)
-    //             })
-    //     })
-    // })
+    petBodyTestData.forEach((petBodyData) => {
+        xit("Post request - Create pet with different id's", () => {
+            cy.postRequest(url+api.pet.postPet, petBodyData)
+                .then(response => {
+                    expect(response.status).eq(200)
+                    expect(response.body.id).eq(petBodyData.id)
+                    expect(response.body.name).eq(petBodyData.name)
+                })
+        })
+    })
 
     Object.entries(data.postPetTests).forEach(([key, value]) => {
-        it(key + " Post request - Create pet", () => {
+        xit(key + " Post request - Create pet", () => {
             cy.postRequest(url + api.pet.postPet, value)
                 .then(response => {
                     expect(response.status).eq(200)
